@@ -12,6 +12,9 @@ class Rectangle{
 const rec = new Rectangle(10,100);
 
 console.log("Width of the rectangle is "+rec.height);
+function act1(){
+    alert("Width of the rectangle is "+rec.height)
+}
 
 // --------------------------------Activity 02--------------------------------
 const rec1 = new Rectangle(10,20);
@@ -19,6 +22,9 @@ const rec2 = new Rectangle(5,20);
 console.log("Area of the rectangle 1 is "+rec1.getArea());
 console.log("Area of the rectangle 2 is "+rec2.getArea());
 
+function act2(){
+    alert("Area of the rectangle 1 is "+rec1.getArea()+"\nArea of the rectangle 2 is "+rec2.getArea())
+}
 
 // --------------------------------Activity 03--------------------------------
 
@@ -53,7 +59,10 @@ console.log(dog2.Sleep())
 console.log("Color of 3rd dog is "+dog3.color);
 console.log(dog3.Sit())
 
-// --------------------------------Activity 03--------------------------------
+function act3(){
+    alert("Color of 1st dog is "+dog1.color+"\n"+dog1.Eat()+"\nColor of 2nd dog is "+dog2.color+"\n"+dog2.Sleep()+"\nColor of 3rd dog is "+dog3.color+"\n"+dog3.Sit())
+}
+// --------------------------------Activity 04--------------------------------
 
 class employee{
     // lunch :"";
@@ -173,9 +182,9 @@ class contract extends employee{
     }
 }
 
-const emp1 = new employee(1,"Ravindu","Kalutara","0771234567","Dec","Software Engineer",300000.00,"non-veg");
-const emp2 = new tempory(2,"Dasun","Panadura","0772345678","2021.12.31","Intern","veg",5);
-const emp3 = new contract(3,"Visal","Panadura","0773456789","2021.12.31","Developer","non-veg",10);
+const emp1 = new employee(1,"Ravindu","Kalutara","0771234567","Software Engineer",300000.00,"non-veg","2020.12.31");
+const emp2 = new tempory(2,"Dasun","Panadura","0772345678","Intern",30000.00,"veg",5,"2021.12.31");
+const emp3 = new contract(3,"Visal","Panadura","0773456789","Developer",150000.00,"non-veg",10,"2021.12.31");
 
 function act4(){
     alert(`Employee No: ${emp1.employeeNo}\nEmployee Name: ${emp1.name}\nEmployee Adress: ${emp1.Address}\nEmployee Contact No: ${emp1.contactNo}\nEmployee Join Date: ${emp1.joinDate}\nEmployee Designation: ${emp1.designation}\nEmployee Salary: ${emp1.salary}\nLunch: ${emp1.lunch}`);
