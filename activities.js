@@ -57,7 +57,7 @@ console.log(dog3.Sit())
 
 class employee{
     // lunch :"";
-    constructor(empNo,name,address,con,nic,joineddate,desig,sal,lunch){
+    constructor(empNo,name,address,con,nic,desig,sal,lunch,joineddate){
         this.employeeNo = empNo;
         this.name = name;
         this.Address = address;
@@ -90,9 +90,14 @@ class employee{
 }
 
 class tempory extends employee{
-    constructor(empNo,name,address,con,nic,joineddate,desig,sal,lunch,duration){
-        super(empNo,name,address,con,nic,joineddate,desig,sal,lunch);
-        this.duration = duration;
+    constructor(empNo,name,address,con,nic,desig,sal,lunch,duration,joineddate){
+        super(empNo,name,address,con,nic,desig,sal,lunch,joineddate);
+        if(duration>6){
+            this.getDuration();
+        }
+        else{
+            this.duration = duration;
+        } 
     }
     extention(time){
         if(time<=3){
@@ -115,6 +120,37 @@ class tempory extends employee{
     }
     getExtention(){
         var temp = prompt("Enter your extention period(months): ");
+        if(this.duration+temp>9){
+            this.getExtention();
+        }
+        else{
+            this.duration = temp;
+            alert(`${this.name}, Your extention period is upadated. Now your working duration is ${this.duration}`);
+        }
+        
+    }
+}
+
+class contract extends employee{
+    constructor(empNo,name,address,con,nic,desig,sal,lunch,duration,joineddate){
+        super(empNo,name,address,con,nic,desig,sal,lunch,joineddate);
+        if(duration>6){
+            this.getDuration();
+        }
+        else{
+            this.duration = duration;
+        } 
+    }
+    extention(time){
+        if(time<=3){
+            this.duration += time;
+        }
+        else{
+            this.getExtention()
+        }
+    }
+    getDuration(){
+        var temp = prompt("Enter your working duration(months): ");
         if(temp>6){
             this.getDuration();
         }
@@ -124,23 +160,25 @@ class tempory extends employee{
         }
         
     }
-}
-
-class contract extends employee{
-    constructor(empNo,name,address,con,nic,joineddate,desig,sal,lunch,duration){
-        super(empNo,name,address,con,nic,joineddate,desig,sal,lunch);
-        this.duration = duration;
-    }
-    extention(time){
-        if(time<=3){
-            this.duration += time;
+    getExtention(){
+        var temp = prompt("Enter your extention period(months): ");
+        if(this.duration+temp>9){
+            this.getExtention();
         }
+        else{
+            this.duration = temp;
+            alert(`${this.name}, Your extention period is upadated. Now your working duration is ${this.duration}`);
+        }
+        
     }
 }
 
-const emp1 = new employee();
-emp1.arrive();
-emp1.getLunch();
-emp1.leave();
+const emp1 = new employee(1,"Ravindu","Kalutara","0771234567","Dec","Software Engineer",300000.00,"non-veg");
+const emp2 = new tempory(2,"Dasun","Panadura","0772345678","2021.12.31","Intern","veg",5);
+const emp3 = new contract(3,"Visal","Panadura","0773456789","2021.12.31","Developer","non-veg",10);
 
-
+function act4(){
+    alert(`Employee No: ${emp1.employeeNo}\nEmployee Name: ${emp1.name}\nEmployee Adress: ${emp1.Address}\nEmployee Contact No: ${emp1.contactNo}\nEmployee Join Date: ${emp1.joinDate}\nEmployee Designation: ${emp1.designation}\nEmployee Salary: ${emp1.salary}\nLunch: ${emp1.lunch}`);
+    alert(`Employee No: ${emp2.employeeNo}\nEmployee Name: ${emp2.name}\nEmployee Adress: ${emp2.Address}\nEmployee Contact No: ${emp2.contactNo}\nEmployee Join Date: ${emp2.joinDate}\nEmployee Designation: ${emp2.designation}\nEmployee Salary: ${emp2.salary}\nLunch: ${emp2.lunch}\nEmployee Duration: ${emp2.duration}`);
+    alert(`Employee No: ${emp3.employeeNo}\nEmployee Name: ${emp3.name}\nEmployee Adress: ${emp3.Address}\nEmployee Contact No: ${emp3.contactNo}\nEmployee Join Date: ${emp3.joinDate}\nEmployee Designation: ${emp3.designation}\nEmployee Salary: ${emp3.salary}\nLunch: ${emp3.lunch}\nEmployee Duration: ${emp3.duration}`);
+}
