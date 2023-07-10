@@ -182,12 +182,12 @@ class contract extends employee{
     }
 }
 
-const emp1 = new employee(1,"Ravindu","Kalutara","0771234567","Software Engineer",300000.00,"non-veg","2020.12.31");
-const emp2 = new tempory(2,"Dasun","Panadura","0772345678","Intern",30000.00,"veg",5,"2021.12.31");
-const emp3 = new contract(3,"Visal","Panadura","0773456789","Developer",150000.00,"non-veg",10,"2021.12.31");
+const emp1 = new employee(1,"Ravindu","Kalutara","0771234567","1000","Software Engineer",300000.00,"non-veg","2020.12.31");
+const emp2 = new tempory(2,"Dasun","Panadura","0772345678","2000","Intern",30000.00,"veg",5,"2021.12.31");
+const emp3 = new contract(3,"Visal","Panadura","0773456789","3000","Developer",150000.00,"non-veg",10,"2021.12.31");
 
 function act4(){
-    alert(`Employee No: ${emp1.employeeNo}\nEmployee Name: ${emp1.name}\nEmployee Adress: ${emp1.Address}\nEmployee Contact No: ${emp1.contactNo}\nEmployee Join Date: ${emp1.joinDate}\nEmployee Designation: ${emp1.designation}\nEmployee Salary: ${emp1.salary}\nLunch: ${emp1.lunch}`);
-    alert(`Employee No: ${emp2.employeeNo}\nEmployee Name: ${emp2.name}\nEmployee Adress: ${emp2.Address}\nEmployee Contact No: ${emp2.contactNo}\nEmployee Join Date: ${emp2.joinDate}\nEmployee Designation: ${emp2.designation}\nEmployee Salary: ${emp2.salary}\nLunch: ${emp2.lunch}\nEmployee Duration: ${emp2.duration}`);
-    alert(`Employee No: ${emp3.employeeNo}\nEmployee Name: ${emp3.name}\nEmployee Adress: ${emp3.Address}\nEmployee Contact No: ${emp3.contactNo}\nEmployee Join Date: ${emp3.joinDate}\nEmployee Designation: ${emp3.designation}\nEmployee Salary: ${emp3.salary}\nLunch: ${emp3.lunch}\nEmployee Duration: ${emp3.duration}`);
+    alert(`Employee No: ${emp1.employeeNo}\nEmployee Name: ${emp1.name}\nEmployee Adress: ${emp1.Address}\nEmployee Contact No: ${emp1.contactNo}\nEmployee Join Date: ${emp1.joinDate}\nEmployee Designation: ${emp1.designation}\nEmployee Salary: ${emp1.salary}`);
+    alert(`Employee No: ${emp2.employeeNo}\nEmployee Name: ${emp2.name}\nEmployee Adress: ${emp2.Address}\nEmployee Contact No: ${emp2.contactNo}\nEmployee Join Date: ${emp2.joinDate}\nEmployee Designation: ${emp2.designation}\nEmployee Salary: ${emp2.salary}\nEmployee Duration: ${emp2.duration}`);
+    alert(`Employee No: ${emp3.employeeNo}\nEmployee Name: ${emp3.name}\nEmployee Adress: ${emp3.Address}\nEmployee Contact No: ${emp3.contactNo}\nEmployee Join Date: ${emp3.joinDate}\nEmployee Designation: ${emp3.designation}\nEmployee Salary: ${emp3.salary}\nEmployee Duration: ${emp3.duration}`);
 }
